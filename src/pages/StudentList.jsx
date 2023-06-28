@@ -367,10 +367,10 @@ const StudentList = () => {
                   </label>
                   <input
                     onChange={(e) => setStdID(e.target.value)}
-                    type="text"
+                    type="number"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={stdId}
-                    placeholder="student id"
+                    placeholder="Student ID"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -385,7 +385,7 @@ const StudentList = () => {
                     type="text"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={name}
-                    placeholder="student full name"
+                    placeholder="Student Full Name"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -400,7 +400,7 @@ const StudentList = () => {
                     type="text"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={gender}
-                    placeholder="gender"
+                    placeholder="Gender"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -415,7 +415,7 @@ const StudentList = () => {
                     type="date"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={dob}
-                    placeholder="date of birth"
+                    placeholder="Date of Birth"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -430,7 +430,7 @@ const StudentList = () => {
                     type="text"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={address}
-                    placeholder="address"
+                    placeholder="Address"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -445,7 +445,7 @@ const StudentList = () => {
                     type="number"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={phoneNo}
-                    placeholder="phone number"
+                    placeholder="Phone number"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -460,7 +460,7 @@ const StudentList = () => {
                     type="text"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={guardianName}
-                    placeholder="guardian name"
+                    placeholder="Guardian Name"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -475,7 +475,7 @@ const StudentList = () => {
                     type="number"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={gurandianPhoneNo}
-                    placeholder="guardian phone number"
+                    placeholder="Guardian phone number"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -490,7 +490,7 @@ const StudentList = () => {
                     type="text"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={mealServices}
-                    placeholder="meal services"
+                    placeholder="Meal Services"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -505,7 +505,7 @@ const StudentList = () => {
                     type="text"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={laundryServices}
-                    placeholder="laundry services"
+                    placeholder="Laundry services"
                   />
                 </div>
                 <div className="relative px-2 w-1/2">
@@ -520,7 +520,7 @@ const StudentList = () => {
                     type="text"
                     className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     value={RoomId}
-                    placeholder="room id"
+                    placeholder="Room id"
                   />
                 </div>
               </div>
