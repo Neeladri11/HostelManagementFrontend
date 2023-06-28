@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { MdArrowLeft, MdArrowRight } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 
 const StudentList = () => {

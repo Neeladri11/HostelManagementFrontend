@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-const Login = ({setAdminParam}) => {
+const SignUp = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [pass, setPassword] = useState('');
     const [loading, setLoading] = useState('');
-    const [message, setMessage] = useState('');
+    //const [message, setMessage] = useState('');
     const data = {
         email: email,
         password: pass
@@ -19,7 +19,7 @@ const Login = ({setAdminParam}) => {
         try {
             const res = await axios({
                 method: 'post',
-                url: `https://localhost:44357/api/User/Login`,
+                url: `https://localhost:44357/api/User/Register`,
                 data: data
             });
     
@@ -58,14 +58,26 @@ const Login = ({setAdminParam}) => {
                     </label>
                     <input onChange={(e) => setPassword(e.target.value)} type="password" className="flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent" placeholder="Password" />
                 </div>
+
+
                 <button type='submit' className="w-full my-8 px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-green-600 shadow-md hover:bg-green-700 focus:outline-none focus:ring-2">
                     <span className="w-full">
-                        {loading ? "Loading..." : "Log in"}
+                        {loading ? "Loading..." : "Sign Up"}
+                    </span>
+                </button>
+                <h6 className='text-white'>Already an existing user?</h6>
+                <button onClick={()=>{
+                    navigate('/login');
+                }} className="w-full my-8 px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-green-600 shadow-md hover:bg-green-700 focus:outline-none focus:ring-2">
+                    <span className="w-full">
+                        {"Log in"}
                     </span>
                 </button>
             </form>
+
+            
         </section>
     );
 }
 
-export default Login;
+export default SignUp;

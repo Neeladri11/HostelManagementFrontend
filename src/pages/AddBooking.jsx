@@ -1,24 +1,24 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const AddHostel = () => {
-  const [noOfStudents, setNoOfStudents] = useState(0);
-  const [noOfRooms, setNoOfRooms] = useState(0);
-  const [noOfAvailableRooms, setNoOfAvailableRooms] = useState(0);
+const AddBooking = () => {
+  const [bookingDate, setBookingDate] = useState(new Date());
+  const [durationOfStay, setDurationOfStay] = useState(0);
+  const [studentId, setStudentId] = useState(0);
   const [loading, setLoading] = useState("");
 
   const data = {
-    noOfStudents: noOfStudents,
-    noOfRooms: noOfRooms,
-    noOfAvailableRooms: noOfAvailableRooms,
+    bookingDate: bookingDate,
+    durationOfStay: durationOfStay,
+    studentId: studentId,
   };
   console.log(data);
-  const AddHostel = async () => {
+  const AddBooking = async () => {
     setLoading(true);
     try {
       const res = await axios({
         method: "post",
-        url: `https://localhost:44357/api/Hostel`,
+        url: `https://localhost:44357/api/Booking`,
         data: data,
         /*
         headers: {
@@ -32,54 +32,54 @@ const AddHostel = () => {
 
   return (
     <section className="container mx-auto px-4 sm:px-8 max-w-100">
-      <h4 className="text-xl font-bold">Add new Hostel</h4>
+      <h4 className="text-xl font-bold">Add new Booking</h4>
       <div className="my-10">
         <div className="flex flex-wrap items-center justify-between">
           <div className="relative px-2 w-1/2">
             <label
-              for="noOfStudents"
+              for="bookingDate"
               className="block text-md py-3 font-medium text-gray-700"
             >
-              Number of Students :
+              Booking Date :
             </label>
             <input
-              onChange={(e) => setNoOfStudents(e.target.value)}
-              type="number"
+              onChange={(e) => setBookingDate(e.target.value)}
+              type="date"
               className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
-              placeholder="Number of Students"
+              placeholder="Booking Date"
             />
           </div>
           <div className="relative px-2 w-1/2">
             <label
-              for="noOfRooms"
+              for="durationOfStay"
               className="block text-md py-3 font-medium text-gray-700"
             >
-              Number of Rooms :
+              Duration of Stay :
             </label>
             <input
-              onChange={(e) => setNoOfRooms(e.target.value)}
+              onChange={(e) => setDurationOfStay(e.target.value)}
               type="number"
               className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
-              placeholder="Number of Rooms"
+              placeholder="Duration of Stay"
             />
           </div>
           <div className="relative px-2 w-1/2">
             <label
-              for="noOfAvailableRooms"
+              for="studentId"
               className="block text-md py-3 font-medium text-gray-700"
             >
-              Number of Available Rooms :
+              Student ID :
             </label>
             <input
-              onChange={(e) => setNoOfAvailableRooms(e.target.value)}
+              onChange={(e) => setStudentId(e.target.value)}
               type="number"
               className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
-              placeholder="Number of Available Rooms"
+              placeholder="Student ID"
             />
           </div>
         </div>
         <button
-          onClick={() => AddHostel()}
+          onClick={() => AddBooking()}
           type="button"
           className="my-4 mx-2 py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
         >
@@ -90,4 +90,4 @@ const AddHostel = () => {
   );
 };
 
-export default AddHostel;
+export default AddBooking;
